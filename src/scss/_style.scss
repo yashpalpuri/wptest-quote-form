@@ -1,0 +1,71 @@
+$accent-color: #00405c !default;
+
+.quote-form {
+  width: 650px !important;
+  max-width: calc(100% - 30px) !important;
+  margin: 30px auto;
+  background: #f7f7f7;
+  border: solid 1px #dbdbdb;
+  padding: 30px;
+
+  .heading-text {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  > p {
+    text-align: center;
+  }
+
+  .quote-form-container {
+    margin-top: 30px;
+  }
+}
+
+.quote-form-container {
+  
+}
+
+.request-quote-form {
+  --space-left: 150px;
+  --margin-left: 150px;
+
+  @media( max-width: 530px ) {
+    --margin-left: 0;
+  }
+  
+  input[type=text],
+  input[type=tel],
+  input[type=number] {
+    margin-bottom: 20px;
+
+    @media( max-width: 530px ) {
+      margin-bottom: 15px;
+    }
+  }
+
+  label {
+    display: grid;
+    grid-template-columns: var(--space-left) auto;
+
+    @media( max-width: 530px ) {
+      grid-template-columns: 1fr;
+    }
+
+    .__is-label {
+      margin-top: 12px;
+    }
+  }
+
+  .message-privacy-policy {
+    margin-left: var(--margin-left);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  input[type=submit] {
+    margin-left: var(--margin-left);
+    background: $accent-color;
+  }
+}
+
